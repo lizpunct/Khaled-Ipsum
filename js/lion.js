@@ -1,48 +1,43 @@
-// generates paragraphs
+document.addEventListener('DOMContentLoaded', function() {
+  generate();
+})
+
+$(document).ready(
+  function() {
+    $('#lorem-ipsum').hover (
+      function() {generate();}
+      // ,function(){
+      //   $(this).css("background-color", "pink");
+      // }
+    );
+  }
+);
+
 generate = function() {
   var output = '';
-  var quantity = parseInt($('#quantity').val());
+  var paragraph = '';
+  // var paragraph = '<p>';
+  var paragraphNo = 1;
 
-  for(var i = 0; i < quantity; i++) {
-    var paragraph = '<p>'
+  for(var i = 0; i < paragraphNo; i++) {
     while (paragraph.length <= maxParagraphLength()) {
       var index = Math.floor(Math.random() * majorKeys.length);
       paragraph += (' ' + majorKeys[index]);
     };
 
-    paragraph += '</p>';
+    // paragraph += '</p>';
     output += paragraph;
   }
-
-  $('#output').html(output);
+  $('#lorem-ipsum').html(output);
 }
 
-// generates randomized paragraph max length
 maxParagraphLength = function() {
-  var baseLength = 400;
-  var threshold = 0.5;
+  var baseLength = 175;
+  var threshold = 0.8;
   var randomizedLength = parseInt(Math.random() * threshold * baseLength) + baseLength;
   return randomizedLength;
 }
 
-// page load
-document.addEventListener('DOMContentLoaded', function() {
-  generate();
-  prependText();
-}, false)
-
-// on select change
-function changeEventHandler(event) {
-  generate();
-}
-
-// prepend text to first paragraph
-function prependText() {
-  var firstParagraph = document.querySelector("p:first-child");
-  firstParagraph.innerHTML = "Lorem Khaled Ipsum is a major key to success." + firstParagraph.innerHTML;
-}
-
-// major keys
 var majorKeys = [
   'Bless up.',
   'They don&rsquo;t want us to win.',
@@ -56,7 +51,6 @@ var majorKeys = [
   'You smart, you loyal, you a genius.',
   'Hammock talk come soon.',
   'Give thanks to the most high.',
-  'Congratulations, you played yourself.',
   'Don&rsquo;t ever play yourself.',
   'The key to more success is to have a lot of pillows.',
   'The ladies always say Khaled you smell good, I use no cologne. Cocoa butter is the key.',
@@ -67,9 +61,9 @@ var majorKeys = [
   'They will try to close the door on you, just open it.',
   'We don&rsquo;t see them, we will never see them.',
   'Every chance I get, I water the plants, Lion!',
-  'In life there will be road blocks but we will over come it.',
+  'In life there will be road blocks but we will overcome it.',
   'Wraith talk.',
-  'Eliptical talk.',
+  'Elliptical talk.',
   'To succeed you must believe. When you believe, you will succeed.',
   'Life is what you make it, so let&rsquo;s make it.',
   'To be successful you&rsquo;ve got to work hard, to make history, simple, you&rsquo;ve got to make it.',
@@ -78,12 +72,11 @@ var majorKeys = [
   'You see that bamboo behind me though, you see that bamboo? Ain&rsquo;t nothin&rsquo; like bamboo. Bless up.',
   'In life you have to take the trash out, if you have trash in your life, take it out, throw it away, get rid of it, major key.',
   'Surround yourself with angels, positive energy, beautiful people, beautiful souls, clean heart, angel.',
-  'Find peace, life is like a water fall, you&rsquo;ve gotta flow.',
+  'Find peace, life is like a waterfall, you&rsquo;ve gotta flow.',
   'Let&rsquo;s see what Chef Dee got that they don&rsquo;t want us to eat.',
   'Lion!',
   'I&rsquo;m up to something.',
   'Surround yourself with angels.',
-  'Fan luv.',
   'Mogul talk.',
   'Major key, don&rsquo;t fall for the trap, stay focused. It&rsquo;s the ones closest to you that want to see you fail.',
   'The key to more success is to get a massage once a week, very important, major key, cloth talk.',
