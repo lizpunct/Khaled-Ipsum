@@ -1,0 +1,96 @@
+/*
+  *               universal
+    namespace|*
+    |*            elements without namespace
+*/
+/*
+  type
+*/
+  |* {
+    margin-top: 0px;
+    margin-bottom: 32px;
+    padding: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+
+    background-color: rgb(27, 43, 52);
+    font-family: Source Code Pro, Consolas, monospace;
+      font-size: 15px;
+      line-height: 20px;
+      color: rgb(216, 222, 233);
+}
+
+/*
+  .class
+    class="indent highlight"
+      html.indent.highlight {}
+*/
+  /*general*/
+    .indent {
+      margin-left: 2ch;
+    }
+    .highlight {
+      background-color: rgb(153,199,148, 0.8);
+      color: rgb(27, 43, 52);
+    }
+    .highlight-tooltip {
+      background-color: rgb(249,145,87, 0.85);
+    }
+    .highlight-title {
+      display: inline;
+
+      padding-top: 2px;
+      padding-left: 4px;
+      padding-bottom: 23px;
+      padding-right: 27ch;
+
+      line-height: 22px;
+      font-weight: 500;
+    }
+    .highlight-title-tooltip {
+      padding-bottom: 20px;
+      padding-right: 11ch;
+    }
+
+  /*syntax*/
+    .argument {
+      color: rgb(249, 145, 87);
+    }
+    .comment {
+      color: rgb(101, 115, 126);
+    }
+    .keyword {
+      color: rgb(197, 148, 197);
+    }
+    .method {
+      color: rgb(102, 153, 204);
+    }
+      .class-method {
+        color: rgb(216, 222, 233);
+      }
+      .lang-method {
+        color: rgb(236, 95, 103);
+        font-style: italic;
+      }
+    .operator {
+      color: rgb(95, 179, 179);
+    }
+    .punctuation {
+      color: rgb(95, 179, 179);
+    }
+    .string {
+      color: rgb(153, 199, 148);
+    }
+    .support {
+      color: rgb(250, 200, 99);
+    }
+    .symbol {
+      color: #5FB3B3;
+    }
+    .tag {
+      color: rgb(236, 95, 103);
+    }
+
+/*
+  #id
+*/
